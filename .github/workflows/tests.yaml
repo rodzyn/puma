@@ -14,7 +14,7 @@ jobs:
     name: 'Rubocop linting'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.6
@@ -65,7 +65,7 @@ jobs:
 
     steps:
       - name: repo checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: load ruby
         uses: ruby/setup-ruby-pkgs@v1
@@ -141,7 +141,7 @@ jobs:
 
     steps:
       - name: repo checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: set JAVA_HOME
         if: startsWith(matrix.os, 'macos')
